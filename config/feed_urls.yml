@@ -1,0 +1,4 @@
+feed_urls:
+  - "http://slashdot.org"
+  - "http://digg.com/technology"
+  - "http://feeds.delicious.com/v2/rss/recent?min=20&count=15"
