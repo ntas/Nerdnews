@@ -5,3 +5,6 @@
     <p class="description"><%= rss_item.description %></p>
   </div>
 <% end -%>
+<div id="pagination">
+  <%= will_paginate @rss_items %>
+</div>
