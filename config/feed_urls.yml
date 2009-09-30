@@ -1,4 +1,4 @@
 feed_urls:
   - "http://slashdot.org"
   - "http://digg.com/technology"
-  - "http://feeds.delicious.com/v2/rss/popular?min=100&count=15"
+  - "http://feeds.delicious.com/v2/rss/popular?min=100&count=5"

@@ -1,5 +1,7 @@
 <% for rss_item in @rss_items -%>
-  <h1><%= link_to(rss_item.title, rss_item.url) %></h1>
-  <p>Post time: <%= rss_item.post_time.to_s(:long) %></p>
-  <p><%= rss_item.description %></p>
+  <div class="rss_item">
+    <h1><%= link_to(rss_item.title, rss_item.url) %></h1>
+    <p class="post_time">Post time: <%= rss_item.post_time.to_s(:long) %></p>
+    <p class="description"><%= rss_item.description %></p>
+  </div>
 <% end -%>
