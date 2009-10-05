@@ -1,10 +1,13 @@
+<%= will_paginate @rss_items %>
 <% for rss_item in @rss_items -%>
   <div class="rss_item">
     <h1><%= link_to(rss_item.title, rss_item.url) %></h1>
-    <p class="post_time">Post time: <%= rss_item.post_time.to_s(:long) %></p>
-    <p class="description"><%= rss_item.description %></p>
+    <div class="post_time">
+      Post time: <%= rss_item.post_time.to_s(:long) %>
+    </div>
+    <div class="description">
+      <%= rss_item.description %>
+    </div><!-- END "description" -->
   </div>
 <% end -%>
-<div id="pagination">
-  <%= will_paginate @rss_items %>
-</div>
+<%= will_paginate @rss_items %>
