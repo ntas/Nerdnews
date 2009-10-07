@@ -14,12 +14,13 @@
 class RssItem < ActiveRecord::Base
   validates_uniqueness_of :url
   
+  # Load our feed_url config
+  FEED_YAML = YAML.load_file 'config/feed_urls.yml'
+  
   def self.update_feeds
-    # Load our feed_url config
-    feed_yaml = YAML.load_file 'config/feed_urls.yml'
     feeds = {}
     # Populate our feeds[] array with the feeds for each feed_url source
-    feed_yaml["feed_urls"].each do |feed_url|
+    FEED_YAML["feed_urls"].each do |feed_name, feed_url|
       feeds[feed_url] = FeedTools::Feed.open(feed_url)
     end
     # Create RssItems from each of our feeds
