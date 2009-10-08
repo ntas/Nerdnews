@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
-  before_filter :check_cookies, :get_preferred_feeds_from_cookie
+  before_filter :check_cookies
   
   def check_cookies
     if cookies[:prefs_set].blank? || cookies[:prefs_set] == false
@@ -28,16 +28,4 @@ class ApplicationController < ActionController::Base
     cookies[:prefs_set] = true
   end
   
-  def get_preferred_feeds_from_cookie
-    @preferred_feeds = {}
-    RssItem::FEED_YAML['feed_urls'].each do |feed_name, feed_url|
-      if cookie[feed_name].blank?
-        @preferred_feeds[feed_name] = false
-      elsif cookie[feed_name] == false
-        @preferred_feeds[feed_name] = false
-      else
-        @preferred_feeds[feed_name] = true
-      end
-    end
-  end
 end
