@@ -1,5 +1,5 @@
 <%- if @rss_items.blank? -%>
-  <p>You have deselected all the feed sources!</p>
+  <p>You have deselected all the feed sources, or no feeds exist from the selected source(s)!</p>
 <%- else -%>
   <%= will_paginate @rss_items %>
   <% for rss_item in @rss_items -%>
