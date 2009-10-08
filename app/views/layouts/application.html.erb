@@ -13,10 +13,13 @@
       <h1>Nerd news</h1>
       <h2>
         <%- @preferred_feeds.each do |feed_name, setting| -%>
-          <%- if setting == true -%>
-            <%= feed_name %>&nbsp;
+          <%- if setting == 1 -%>
+            <%= link_to(feed_name.humanize, {:action => :toggle_pref, :id => feed_name}) %>&nbsp;
           <%- else -%>
-            <del><%= feed_name %></del>&nbsp;
+            <del>
+              <%= link_to(feed_name.humanize, {:action => :toggle_pref, :id => feed_name}) %>
+            </del>
+            &nbsp;
           <%- end -%>
         <%- end -%>
         </h2>
