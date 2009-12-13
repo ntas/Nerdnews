@@ -6,7 +6,7 @@ class RssItemsController < ApplicationController
     conditions = ""
     no_preferred_feeds = true # We want to check for people deselecting all feeds
     @preferred_feeds.each do |preferred_feed, setting|
-      if setting == 1
+      if setting == 1 || setting == true
         conditions += "source LIKE '" + RssItem::FEED_YAML['feeds'][preferred_feed] + "' OR "
         no_preferred_feeds = false
       end
@@ -35,7 +35,7 @@ class RssItemsController < ApplicationController
     RssItem::FEED_YAML['feeds'].each do |feed_name, feed_url|
       if cookies[feed_name].blank?
         @preferred_feeds[feed_name] = 0
-      elsif cookies[feed_name] == '0'
+      elsif cookies[feed_name] == '0' || cookies[feed_name] == false
         @preferred_feeds[feed_name] = 0
       else
         @preferred_feeds[feed_name] = 1
