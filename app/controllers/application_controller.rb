@@ -21,11 +21,11 @@ class ApplicationController < ActionController::Base
     # Loop through our feed_list and set 
     unless feed_list.blank?
       feed_list.each do |feed|
-        cookies[feed] = {:value => true}
+        cookies[feed] = {:value => true, :expires => 1.year.from_now}
       end
     end
     # Set :prefs_set to true
-    cookies[:prefs_set] = {:value => true}
+    cookies[:prefs_set] = {:value => true, :expires => 1.year.from_now}
   end
   
 end
