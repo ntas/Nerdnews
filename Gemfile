@@ -1,7 +1,7 @@
 source :gemcutter
 gem "rails", "~> 2.3.8"
 
-gem "feedtools", :lib  => "feed_tools"
+gem "feedtools", :require  => "feed_tools"
 gem "will_paginate"
 
 group :development do
