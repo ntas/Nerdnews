@@ -10,6 +10,10 @@ dependencies:
     group: 
     - :default
     version: ~> 2.3.8
+  mysql: 
+    group: 
+    - :production
+    version: ">= 0"
   sqlite3-ruby: 
     group: 
     - :development
@@ -51,6 +55,8 @@ specs:
     version: 2.1.1
 - feedtools: 
     version: 0.2.29
+- mysql: 
+    version: 2.8.1
 - rails: 
     version: 2.3.8
 - sqlite3-ruby: 
@@ -59,7 +65,7 @@ specs:
     version: 2.3.14
 - wirble: 
     version: 0.1.3
-hash: 69e0a1c14cc50912ec966bc284fd48107c64911a
+hash: f1b2518c764aec9cb36491fc65d6fe2041ffa84e
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
