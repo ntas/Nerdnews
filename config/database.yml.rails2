@@ -1,0 +1,6 @@
+production:
+  adapter: mysql
+  database: nerdnews_production
+  username: nerdnews
+  password: jbygt35ssR
+  socket: /var/lib/mysql/mysql.sock
