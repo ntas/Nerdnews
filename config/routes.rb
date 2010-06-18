@@ -9,6 +9,7 @@ Nerdnews::Application.routes.draw do |map|
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
+  match 'toggle_pref/:id' => 'rss_items#toggle_pref', :as  => :toggle_pref
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
