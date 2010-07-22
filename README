@@ -9,4 +9,4 @@ automatically find the feed links.
 To update the feeds, add a cronjob to your server poll the feeds for new items. I have a half-hourly update running on 
 http://nerdnews.tjl2.com as follows:
 
-04,34 * * * * root cd /path/to/current; ./script/runner -e production 'RssItem.update_feeds'
+04,34 * * * * root cd /path/to/current; rails runner -e production 'RssItem.update_feeds'
