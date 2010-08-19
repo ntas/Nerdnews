@@ -1,0 +1,3 @@
+environments:
+  Nerdnews_cluster:
+    migration_command: bundle exec "rake db:migrate"
