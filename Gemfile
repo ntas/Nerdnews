@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0.rc2'
+gem 'rails', '3.0.0'
 
 gem "feedtools", :require  => "feed_tools"
 gem "will_paginate", :git => "git://github.com/mislav/will_paginate.git", :branch => "rails3"
