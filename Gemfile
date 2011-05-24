@@ -11,6 +11,6 @@ group :development do
 end
 
 group :production do
-  gem "mysql"
+  gem "mysql2"
   gem 'rack', '>=1.2.1'
 end
