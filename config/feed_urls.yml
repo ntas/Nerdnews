@@ -1,6 +1,5 @@
 feeds:
   slashdot: "http://slashdot.org"
   digg: "http://digg.com/technology"
-  delicious: "http://feeds.delicious.com/v2/rss/popular?min=100&count=5"
   the_register: "http://www.theregister.co.uk/software/headlines.atom"
   the_chive: "http://www.thechive.com"
