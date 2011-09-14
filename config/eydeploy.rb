@@ -40,7 +40,8 @@
 #  end
 #end
 
-def bundler_10_installer(version, options = '')
-  default_options = "--deployment --path #{c.shared_path}/bundled_gems --binstubs #{c.binstubs_path} --without development test cucumber"
-  BundleInstaller.new(version, default_options + options)
-end
+
+#def bundler_10_installer(version, options = '')
+#  default_options = "--deployment --path #{c.shared_path}/bundled_gems --binstubs #{c.binstubs_path} --without development test cucumber"
+#  BundleInstaller.new(version, default_options + options)
+#end
